@@ -1,0 +1,13 @@
+{
+  "type": "slider",
+  "code": "login",
+  "items": [{
+      "url": "",
+      "title": "ligin slide 1",
+      "description": "Slide 1 for login"
+    }, {
+      "url": "",
+      "title": "login slide 2",
+      "description": "Slide 2 for login"
+    }]
+}
