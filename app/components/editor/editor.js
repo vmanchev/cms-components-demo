@@ -9,16 +9,17 @@ angular.module('cms.components.editor', ['cms.components', 'ngCkeditor'])
         code: '@code'
       },
       controller: function (componentService) {
-
         var vm = this;
-        vm.content = '';
         
-        componentService.getComponent('editor', this.code).then(function(data){
-          vm.slides = data;
-        });
+        //all components data is already prefetch, 
+        //now filter and get the configuration for this particular component
+        vm.editorCfg = componentService.getConfig('editor', this.code);
+        
+        //pass data from component configuration to the component template
+        vm.editorModel = vm.editorCfg.value;
       },
       restrict: 'E',
       template: '<h1>This is an editor</h1>' + 
-        '<textarea ckeditor ng-model="modelName"></textarea>'
+        '<textarea ckeditor ng-model="vm.editorModel"></textarea>'
     };
   });

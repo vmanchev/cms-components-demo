@@ -9,15 +9,15 @@ angular.module('cms.components.slider', ['cms.components'])
         code: '@code'
       },
       controller: function (componentService) {
-
+        
         var vm = this;
         
-        componentService.getComponent('slider', this.code).then(function(data){
-          vm.slides = data;
-        });
+        //all components data is already prefetch, 
+        //now filter and get the configuration for this particular component
+        vm.slides = componentService.getConfig('slider', this.code);
       },
       restrict: 'E',
-      template: '<h1>This is a slider</h1>' + 
-        '<ul><li ng-repeat="slide in vm.slides.items"><img ng-src="{{ slide.url }}" width="100">{{ slide.title }}</li></ul>'
+      template: '<h1>This is a slider</h1>' +
+        '<ul><li ng-repeat="slide in vm.slides.value"><img ng-src="{{ slide.url }}" width="100">{{ slide.title }}</li></ul>'
     }
   });

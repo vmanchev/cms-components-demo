@@ -1,0 +1,35 @@
+{
+  "components": [
+    {
+      "type": "slider",
+      "code": "login",
+      "value": [{
+          "url": "",
+          "title": "ligin slide 1",
+          "description": "Slide 1 for login"
+        }, {
+          "url": "",
+          "title": "login slide 2",
+          "description": "Slide 2 for login"
+        }]
+    },
+    {
+      "type": "slider",
+      "code": "home",
+      "value": [{
+          "url": "https://goo.gl/VYWYnl",
+          "title": "Renalt Captur",
+          "description": "Slide 1 description goes here"
+        }, {
+          "url": "https://goo.gl/gyG5zi",
+          "title": "Citroen 2CV",
+          "description": "Slide 2 description goes here"
+        }]
+    },
+    {
+      "type": "editor",
+      "code": "legal",
+      "value" : "this is a test on how to pass data to the editor"
+    }
+  ]
+}
